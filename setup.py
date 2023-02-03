@@ -6,7 +6,7 @@ from setuptools import find_packages, setup, Command
 
 NAME = 'gmgeoip'
 DESCRIPTION = 'Provides access to GeoIP databases from MaxMind and ip2location.'
-URL = 'https://github.com/2ifire/gmgeoip'
+URL = 'https://github.com/Ax-r/gmgeoip'
 EMAIL = 'contact@firemail.at'
 AUTHOR = 'Albert Hofmann'
 REQUIRES_PYTHON = '>=3.6.0'
