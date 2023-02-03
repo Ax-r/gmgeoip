@@ -4,41 +4,25 @@ import sys
 from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
-# Package meta-data.
 NAME = 'gmgeoip'
 DESCRIPTION = 'Provides access to GeoIP databases from MaxMind and ip2location.'
 URL = 'https://github.com/2ifire/gmgeoip'
 EMAIL = 'contact@firemail.at'
 AUTHOR = 'Albert Hofmann'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
-# What packages are required for this module to be executed?
-REQUIRED = [
-    'geoip2',
-]
-
-# What packages are optional?
-EXTRAS = {
-    # 'fancy feature': ['django'],
-}
-
-# The rest you shouldn't have to touch too much :)
-# ------------------------------------------------
-# Except, perhaps the License and Trove Classifiers!
-# If you do change the License, remember to change the Trove Classifier for that!
+REQUIRED = ['geoip2',]
+EXTRAS = {}
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-# Import the README and use it as the long-description.
-# Note: this will only work if 'README.md' is present in your MANIFEST.in file!
 try:
     with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
         long_description = '\n' + f.read()
 except FileNotFoundError:
     long_description = DESCRIPTION
 
-# Load the package's __version__.py module as a dictionary.
 about = {}
 if not VERSION:
     project_slug = NAME.lower().replace("-", "_").replace(" ", "_")
@@ -46,7 +30,6 @@ if not VERSION:
         exec(f.read(), about)
 else:
     about['__version__'] = VERSION
-
 
 class UploadCommand(Command):
     """Support setup.py upload."""

@@ -7,6 +7,6 @@
 #l___,_jl___j___jl___,_jl_____j \___/|____jl__j   
                                                  
 
-VERSION = (0, 0, 1)
+VERSION = (0, 0, 3)
 
 __version__ = '.'.join(map(str, VERSION))
